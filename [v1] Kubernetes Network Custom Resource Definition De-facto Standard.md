@@ -516,73 +516,39 @@ This optional keys value (type string array) shall contain the array of DNS sear
 5.4 Example
 
 ```
-
 kind: Pod
-
 metadata:
-
   name: my-pod
-
   namespace: my-namespace
-
   annotations:
-
     k8s.v1.cni.cncf.io/network-status: |
-
       [
-
         {
-
           "name": "cluster-wide-default",
-
           "interface": "eth5",
-
           "ips": ["1.2.3.1/24", "2001:abba::2230/64"],
-
           "mac": "02:11:22:33:44:54",
-
           "default": true
-
         },
-
         {
-
           "name": "some-network",
-
           "interface": "eth1",
-
           "ips": ["1.2.3.4/24", "2001:abba::2234/64"],
-
           "mac": "02:11:22:33:44:55",
-
           "dns": {
-
             "nameservers": ["4.2.2.1", "2001:4860:4860::8888"],
-
             "search": ["eng.foobar.com", "foobar.com"]
-
           },
-
           "default": false
-
         },
-
         {
-
           "name": "other-ns/an-ip-over-infiniband-network",
-
           "interface": "ib0",
-
           "ips": ["5.4.3.2/16"],
-
           "mac": "80:00:11:22:33:44:55:66:77:88:99:aa:bb:cc:dd:ee:ff:00:11:22",
-
           "default": false
-
         }
-
       ]
-
 ```
 
 **6. Cluster-Wide Default Network**
