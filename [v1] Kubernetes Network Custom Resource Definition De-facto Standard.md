@@ -515,7 +515,7 @@ This optional keys value (type string array) shall contain the array of DNS sear
 
 5.4 Example
 
-**```**
+```
 
 kind: Pod
 
@@ -583,7 +583,7 @@ metadata:
 
       ]
 
-**```**
+```
 
 **6. Cluster-Wide Default Network**
 
